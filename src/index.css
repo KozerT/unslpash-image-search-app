@@ -81,3 +81,7 @@ main {
   padding: 1rem;
   background-color: #2c344a;
 }
+
+.open {
+  display: block;
+}
