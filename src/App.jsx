@@ -7,16 +7,10 @@ function App() {
         <h2>Why work with us?</h2>
         <Accordion className="accordion">
           <Accordion.Item id="23972374wererwe" className="accordion-item">
-            <Accordion.Title
-              id="23972374wererwe"
-              className="accordion-item-title"
-            >
+            <Accordion.Title className="accordion-item-title">
               We have a 20 years of experience
             </Accordion.Title>
-            <Accordion.Content
-              id="23972374wererwe"
-              className="accordion-item-content"
-            >
+            <Accordion.Content className="accordion-item-content">
               <article>
                 <p>You can&apos;t go wrong with us. </p>
                 <p>We are in the business of planning trips for 20 years</p>
@@ -24,16 +18,10 @@ function App() {
             </Accordion.Content>
           </Accordion.Item>
           <Accordion.Item id="23972wewieu838erwe" className="accordion-item">
-            <Accordion.Title
-              id="23972wewieu838erwe"
-              className="accordion-item-title"
-            >
+            <Accordion.Title className="accordion-item-title">
               Plan Your Trip with Confidence
             </Accordion.Title>
-            <Accordion.Content
-              id="23972wewieu838erwe"
-              className="accordion-item-content"
-            >
+            <Accordion.Content className="accordion-item-content">
               <article>
                 <p> Let us take the stress out of travel planning. </p>
                 <p>
@@ -44,16 +32,10 @@ function App() {
             </Accordion.Content>
           </Accordion.Item>
           <Accordion.Item id="233284werwhgfgn8erwe" className="accordion-item">
-            <Accordion.Title
-              id="233284werwhgfgn8erwe"
-              className="accordion-item-title"
-            >
+            <Accordion.Title className="accordion-item-title">
               Unforgettable Trips, Guaranteed
             </Accordion.Title>
-            <Accordion.Content
-              id="233284werwhgfgn8erwe"
-              className="accordion-item-content"
-            >
+            <Accordion.Content className="accordion-item-content">
               <article>
                 <p>
                   We&apos;re so confident you&apos;ll love your trip that we
