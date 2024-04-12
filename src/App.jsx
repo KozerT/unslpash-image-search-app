@@ -7,44 +7,50 @@ function App() {
   return (
     <main>
       <section>
-        <h2>Why work with us?</h2>
+        <h2>Main Section</h2>
         <Accordion className="accordion">
           <Accordion.Item id="23972374wererwe" className="accordion-item">
             <Accordion.Title className="accordion-item-title">
-              We have a 20 years of experience
+              Title
             </Accordion.Title>
             <Accordion.Content className="accordion-item-content">
               <article>
-                <p>You can&apos;t go wrong with us. </p>
-                <p>We are in the business of planning trips for 20 years</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p>
+                  Sed do eiusmod tempor incididunt ut labore et dolore magna
+                  aliqua.
+                </p>
               </article>
             </Accordion.Content>
           </Accordion.Item>
           <Accordion.Item id="23972wewieu838erwe" className="accordion-item">
             <Accordion.Title className="accordion-item-title">
-              Plan Your Trip with Confidence
+              Another Title
             </Accordion.Title>
             <Accordion.Content className="accordion-item-content">
               <article>
-                <p> Let us take the stress out of travel planning. </p>
                 <p>
-                  With our proven track record, you can relax knowing your trip
-                  is in good hands.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+                <p>
+                  Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur.
                 </p>
               </article>
             </Accordion.Content>
           </Accordion.Item>
           <Accordion.Item id="233284werwhgfgn8erwe" className="accordion-item">
             <Accordion.Title className="accordion-item-title">
-              Unforgettable Trips, Guaranteed
+              Final Title
             </Accordion.Title>
             <Accordion.Content className="accordion-item-content">
               <article>
                 <p>
-                  We&apos;re so confident you&apos;ll love your trip that we
-                  guarantee your satisfaction.
+                  Excepteur sint occaecat cupidatat non proident, sunt in culpa
+                  qui officia deserunt mollit anim id est laborum.
                 </p>
-                <p>Let us plan your next adventure, worry-free.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
               </article>
             </Accordion.Content>
           </Accordion.Item>
@@ -58,7 +64,7 @@ function App() {
           items={["item 1", "item 2"]}
           itemKeyFn={(item) => item.id}
         >
-          {(item) => item}
+          {(item) => "Placeholder text"}
         </SearchableList>
       </section>
     </main>
