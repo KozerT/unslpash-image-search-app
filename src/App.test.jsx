@@ -53,4 +53,16 @@ describe("App component", () => {
       expect(article).toBeInTheDocument();
     });
   });
+
+  test("renders 2 SearchableList components", () => {
+    render(<App />);
+    const searchComponents = screen.getAllByRole("searchbox");
+    expect(searchComponents.length).toBe(2);
+  });
+
+  test("renders Place component inside SearchableList", () => {
+    render(<App />);
+    const placeComponents = screen.getAllByRole("article");
+    expect(placeComponents.length).toBeGreaterThan(0);
+  });
 });
