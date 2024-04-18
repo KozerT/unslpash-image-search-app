@@ -1,13 +1,15 @@
 import { useState } from "react";
+import { useRef } from "react";
 import useAxios from "../../hooks/useAxios";
 import useDebounce from "../../hooks/useDebounce";
 
-const IMAGES_PER_PAGE = 6;
+const IMAGES_PER_PAGE = 1;
 const DEBOUNCE_DELAY = 500;
 
 const SearchableList = ({ itemKeyFn, children }) => {
   const [searchTerm, setSearchTerm] = useState("");
 
+  const searchInput = useRef(null);
   const debouncedSearchTerm = useDebounce(searchTerm, DEBOUNCE_DELAY);
 
   const { response, isLoading } = useAxios(
@@ -18,35 +20,14 @@ const SearchableList = ({ itemKeyFn, children }) => {
       : null
   );
 
-  const handleChange = (e) => {
-    setSearchTerm(e.target.value);
-  };
-
-  const handleKeyDown = (e) => {
-    if (
-      e.key === "Backspace" &&
-      searchTerm === "" &&
-      response &&
-      response.length > 0
-    ) {
-      return;
-    }
-    if (searchTerm.length === 0 && e.key.length === 1) {
-      // Assuming only single character is typed
-      return;
-    }
+  const handleSearch = (e) => {
+    e.preventDefault();
+    setSearchTerm(searchInput.current.value);
   };
 
   return (
-    <div className="searchable-list">
-      <input
-        type="search"
-        value={searchTerm}
-        placeholder="Search anything"
-        onChange={handleChange}
-        onKeyDown={handleKeyDown}
-      />
-
+    <form className="searchable-list" onSubmit={handleSearch}>
+      <input type="search" ref={searchInput} placeholder="Search anything" />
       <ul>
         {isLoading && <p>Loading...</p>}
         {!isLoading && response && (
@@ -57,7 +38,7 @@ const SearchableList = ({ itemKeyFn, children }) => {
           </ul>
         )}
       </ul>
-    </div>
+    </form>
   );
 };
 

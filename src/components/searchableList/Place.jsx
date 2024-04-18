@@ -1,5 +1,4 @@
 export default function Place({ item }) {
-  console.log(item);
   return (
     <article className="place">
       <img src={item.urls.small} alt={item.title} />
