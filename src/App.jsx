@@ -1,5 +1,5 @@
 import Accordion from "./components/accordion/Accordion";
-import Place from "./components/searchableList/Place.jsx";
+import ListItem from "./components/searchableList/ListItem.jsx";
 import SearchableList from "./components/searchableList/SearchableList";
 
 function App() {
@@ -39,25 +39,11 @@ function App() {
               </article>
             </Accordion.Content>
           </Accordion.Item>
-          <Accordion.Item id="233284werwhgfgn8erwe" className="accordion-item">
-            <Accordion.Title className="accordion-item-title">
-              Final Title
-            </Accordion.Title>
-            <Accordion.Content className="accordion-item-content">
-              <article>
-                <p>
-                  Excepteur sint occaecat cupidatat non proident, sunt in culpa
-                  qui officia deserunt mollit anim id est laborum.
-                </p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              </article>
-            </Accordion.Content>
-          </Accordion.Item>
         </Accordion>
       </section>
       <section>
         <SearchableList itemKeyFn={(item) => item.id}>
-          {(item) => <Place item={item} />}
+          {(item) => <ListItem item={item} />}
         </SearchableList>
       </section>
     </main>

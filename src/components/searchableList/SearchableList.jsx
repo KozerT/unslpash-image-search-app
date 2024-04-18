@@ -3,7 +3,7 @@ import { useRef } from "react";
 import useAxios from "../../hooks/useAxios";
 import useDebounce from "../../hooks/useDebounce";
 
-const IMAGES_PER_PAGE = 1;
+const IMAGES_PER_PAGE = 6;
 const DEBOUNCE_DELAY = 500;
 
 const SearchableList = ({ itemKeyFn, children }) => {
@@ -38,16 +38,16 @@ const SearchableList = ({ itemKeyFn, children }) => {
           Search
         </button>
       </div>
-      <ul>
+      <div>
         {isLoading && <p>Loading...</p>}
         {!isLoading && response && (
-          <ul>
+          <ul className="searchable-list-items">
             {response.map((item) => (
               <li key={itemKeyFn(item)}>{children(item)}</li>
             ))}
           </ul>
         )}
-      </ul>
+      </div>
     </form>
   );
 };
