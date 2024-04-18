@@ -8,8 +8,8 @@ const DEBOUNCE_DELAY = 500;
 
 const SearchableList = ({ itemKeyFn, children }) => {
   const [searchTerm, setSearchTerm] = useState("");
-
   const searchInput = useRef(null);
+
   const debouncedSearchTerm = useDebounce(searchTerm, DEBOUNCE_DELAY);
 
   const { response, isLoading } = useAxios(
@@ -27,7 +27,17 @@ const SearchableList = ({ itemKeyFn, children }) => {
 
   return (
     <form className="searchable-list" onSubmit={handleSearch}>
-      <input type="search" ref={searchInput} placeholder="Search anything" />
+      <div className="searchable-list-input-container">
+        <input
+          type="search"
+          ref={searchInput}
+          placeholder="Search anything"
+          className="searchable-list-input"
+        />
+        <button type="submit" className="searchable-list-button-submit">
+          Search
+        </button>
+      </div>
       <ul>
         {isLoading && <p>Loading...</p>}
         {!isLoading && response && (
