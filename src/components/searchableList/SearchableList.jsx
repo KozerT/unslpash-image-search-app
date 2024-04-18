@@ -22,10 +22,6 @@ const SearchableList = ({ itemKeyFn, children }) => {
     setSearchTerm(e.target.value);
   };
 
-  const handleReset = () => {
-    setSearchTerm("");
-  };
-
   const handleKeyDown = (e) => {
     if (
       e.key === "Backspace" &&
@@ -50,12 +46,7 @@ const SearchableList = ({ itemKeyFn, children }) => {
         onChange={handleChange}
         onKeyDown={handleKeyDown}
       />
-      {searchTerm && (
-        <button onClick={handleReset}>
-          {/* Add an icon or text to represent clearing the input */}
-          Clear
-        </button>
-      )}
+
       <ul>
         {isLoading && <p>Loading...</p>}
         {!isLoading && response && (
